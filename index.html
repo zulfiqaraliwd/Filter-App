@@ -10,18 +10,23 @@
     <h1>Filter App</h1>
 
 <div id="btns">
-    <button id="electric" onclick="electric()">Electronics</button>
-    <button id="foot" onclick="foot()">Footwear</button>
-    <button id="home" onclick="home()">Home Appliances</button>
-    <button id="stationery" onclick="stationery()">Stationery</button>
-    <button id="furniture" onclick="furniture()">Furniture</button>
-    <button id="fitness" onclick="fitness()">Fitness</button>
-    <button id="kitchen" onclick="kitchen()">Kitchen Appliances</button>
+
+    <button id="all" onclick="render(products)">All Products</button>
+    <button id="electric" onclick="filterByCategory('Electronics')">Electronics</button>
+    <button id="foot" onclick="filterByCategory('Footwear')">Footwear</button>
+    <button id="home" onclick="filterByCategory('Home Appliances')">Home Appliances</button>
+    <button id="stationery" onclick="filterByCategory('Stationery')">Stationery</button>
+    <button id="furniture" onclick="filterByCategory('Furniture')">Furniture</button>
+    <button id="fitness" onclick="filterByCategory('Fitness')">Fitness</button>
+    <button id="kitchen" onclick="filterByCategory('Kitchen Appliances')">Kitchen Appliances</button>
 </div>
 
 
 
-<div id="container"></div>
+<div id="container">
+
+
+</div>
 <script src="app.js"></script>
 </body>
 </html>

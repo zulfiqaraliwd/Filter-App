@@ -7,7 +7,7 @@ const products = [
         brand: "Logitech"
     },
     {
-        name: "Smartphone",
+        name: "Smartphone", 
         price: 699.99,
         category: "Electronics",
         brand: "Samsung"
@@ -228,40 +228,37 @@ const products = [
 const btns = document.getElementById('btns')
 const container = document.getElementById('container')
 
-function render(products){
+
+function render(products) {
     container.innerHTML = "";
-    products.forEach((e)=>container.innerHTML += `<div id="list">Name:${e.name} Price:${e.price} Category:${e.category} Brand:${e.brand}</div>`)
+products.forEach((p)=> {
+    container.innerHTML += `
+        <div class="list">
+            <h2>${p.name}</h2>
+            <p>Price: $${p.price}</p>
+            <p>Brand: ${p.brand}</p>
+            <p>Category: ${p.category}</p>
+        </div>
+        `;
+        })
 }
 render(products)
+    
+ 
 
 
-function electric(){
-var electronics = products.filter((e)=> e.category=="Electronics")
-electronics.forEach((e)=>{
-    container.innerHTML += '';
-     container.innerHTML += `
-        <h2>${e.name}</h2>
-        <p>Price: $${e.price}</p>
-        <p>Brand: ${e.brand}</p>
-        <p>Category: ${e.category}</p>
-    `;
-})
-}
-function foot(){
 
-}
-function home(){
-
-}
-function stationery(){
-
-}
-function furniture(){
-
-}
-function fitness(){
-
-}
-function kitchen(){
-
-}
+function filterByCategory(category) {
+    const filtered = products.filter(p => p.category === category);
+    container.innerHTML = ""; 
+    filtered.forEach(p => {
+    container.innerHTML += `
+        <div class="list">
+            <h2>${p.name}</h2>
+            <p>Price: $${p.price}</p>
+            <p>Brand: ${p.brand}</p>
+            <p>Category: ${p.category}</p>
+        </div>
+        `;
+        
+    })}
