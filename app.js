@@ -245,9 +245,6 @@ products.forEach((p)=> {
 render(products)
     
  
-
-
-
 function filterByCategory(category) {
     const filtered = products.filter(p => p.category === category);
     container.innerHTML = ""; 

@@ -3,8 +3,8 @@
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
-background:#F4F4F4;
-border:2px solid black;
+background:#49a863;
+border:2px solid rgb(12, 128, 16);
 border-radius: 10px;
 
 align-items: center;
@@ -12,15 +12,16 @@ align-items: center;
 
 button{
   
-    background: rgb(232, 232, 48);
+    background: yellow;
     padding: 10px;
     font-size: large;
     border-radius: 10px;
+   
 }
 
 .list {
  
-  border: 2px solid black;
+  border: 2px solid rgb(0, 0, 0);
 border-radius: 6px;
 padding: 12px;
 margin:5px;
@@ -29,9 +30,10 @@ height: 200px;
 width: 200px;
 }
 #btns{
-   flex: 1;
 padding: 26px;
+justify-content: center;
+
   }
   body{
-    background: C0B87A;
+    background:rgb(62, 223, 150)
   }
